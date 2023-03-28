@@ -1,8 +1,15 @@
-
 plugins {
+    id 'org.sonarqube' version '3.5.0.2730'
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
+sonarqube {
+    properties {
+        property "sonar.projectKey", "InternalErrorGit_BetterFactories"
+        property "sonar.organization", "internalerror"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
 
 group = 'net.internalerror'
 version = '1.0-SNAPSHOT'
@@ -49,9 +56,9 @@ minecraft {
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
 
-                        // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
+            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', 'BetterFactories'
-            
+
             mods {
                 betterfactories {
                     source sourceSets.main
@@ -66,8 +73,8 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-                        property 'forge.enabledGameTestNamespaces', 'BetterFactories'
-            
+            property 'forge.enabledGameTestNamespaces', 'BetterFactories'
+
             mods {
                 betterfactories {
                     source sourceSets.main
@@ -149,13 +156,13 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title": "betterfactories",
-                            "Specification-Vendor": "InternalError_",
-                            "Specification-Version": "1", // We are version 1 of ourselves
-                "Implementation-Title": project.name,
-                "Implementation-Version": project.jar.archiveVersion,
-                            "Implementation-Vendor": "InternalError_",
-                            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Specification-Title"     : "betterfactories",
+                "Specification-Vendor"    : "InternalError_",
+                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : "InternalError_",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }
