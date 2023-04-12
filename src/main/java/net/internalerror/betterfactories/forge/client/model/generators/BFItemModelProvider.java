@@ -1,5 +1,6 @@
 package net.internalerror.betterfactories.forge.client.model.generators;
 
+import net.internalerror.betterfactories.forge.registry.BFItems;
 import net.internalerror.betterfactories.util.Util;
 import net.internalerror.betterfactories.util.Materials;
 import net.minecraft.data.DataGenerator;
@@ -8,7 +9,7 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import static net.internalerror.betterfactories.BetterFactories.BETTER_FACTORIES;
+import static net.internalerror.betterfactories.BetterFactories.MOD_ID;
 
 /**
  * {@link net.internalerror.betterfactories.BetterFactories}
@@ -18,7 +19,7 @@ import static net.internalerror.betterfactories.BetterFactories.BETTER_FACTORIES
  */
 public final class BFItemModelProvider extends ItemModelProvider {
     public BFItemModelProvider(DataGenerator pDataGenerator, ExistingFileHelper pExistingFileHelper) {
-        super(pDataGenerator, BETTER_FACTORIES, pExistingFileHelper);
+        super(pDataGenerator, MOD_ID, pExistingFileHelper);
     }
 
     @Override
@@ -26,6 +27,11 @@ public final class BFItemModelProvider extends ItemModelProvider {
         for (Materials material : Materials.values()) {
             material(material);
         }
+        
+        blockItem(BFItems.CRUSHING_MACHINE.get());
+        item(BFItems.ENERGY_UPGRADE.get());
+        item(BFItems.SPEED_UPGRADE.get());
+        
     }
 
     private void material(Materials pMaterial) {
@@ -50,7 +56,7 @@ public final class BFItemModelProvider extends ItemModelProvider {
 
 
     private void blockItem(Item pItem) {
-        blockItem(Util.getItemPath(pItem));
+        blockItem(Util.getItemKey(pItem));
     }
 
     private void blockItem(String pPath) {
@@ -58,7 +64,7 @@ public final class BFItemModelProvider extends ItemModelProvider {
     }
 
     private void item(Item pItem) {
-        item(Util.getItemPath(pItem));
+        item(Util.getItemKey(pItem));
     }
 
     private final ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));

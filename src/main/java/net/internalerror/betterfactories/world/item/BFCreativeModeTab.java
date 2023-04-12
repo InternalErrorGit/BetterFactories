@@ -4,7 +4,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
-import static net.internalerror.betterfactories.BetterFactories.BETTER_FACTORIES;
+import static net.internalerror.betterfactories.BetterFactories.MOD_ID;
 import static net.minecraft.world.item.Items.HOPPER;
 
 /**
@@ -15,7 +15,7 @@ import static net.minecraft.world.item.Items.HOPPER;
  */
 public final class BFCreativeModeTab extends CreativeModeTab {
 
-    public static final BFCreativeModeTab TAB = new BFCreativeModeTab(BETTER_FACTORIES);
+    public static final BFCreativeModeTab TAB = new BFCreativeModeTab(MOD_ID);
 
     public BFCreativeModeTab(String pName) {
         super(CreativeModeTab.TABS.length, pName);

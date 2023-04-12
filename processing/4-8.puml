@@ -1,0 +1,17 @@
+@startuml
+start
+-> 1 Lead Ore / 1 Raw Lead;
+:Crushing Machine;
+-> 1-2 Lead Clumps;
+:Dissolving Machine;
+-> 2000-4000mb Dirty Dissolved Lead Ore;
+:Crystallizing Machine;
+-> 2-4 Lead Crystals;
+:Crushing Machine;
+-> 4-8 Lead Shard;
+:Pulverizing Machine;
+-> 4-8 Lead Dust;
+:Smelting Machine;
+-> 4-8 Lead Ingot;
+stop
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+
+start
+-> 1 Lead Ore / 1 Raw Lead;
+:Crushing Machine;
+-> 1-2 Lead Clump;
+:Smelting Machine;
+-> 1-2 Lead Ingot;
+stop
+
+@enduml

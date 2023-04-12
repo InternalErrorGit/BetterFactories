@@ -1,0 +1,20 @@
+{
+  "block.betterfactories.deepslate_nickel_ore": "Deepslate Nickel Ore",
+  "block.betterfactories.dirty_dissolved_nickel_fluid_block": "Dirty Dissolved Nickel",
+  "block.betterfactories.dissolved_nickel_fluid_block": "Dissolved Nickel",
+  "block.betterfactories.nickel_block": "Nickel Block",
+  "block.betterfactories.nickel_ore": "Nickel Ore",
+  "block.betterfactories.raw_nickel_block": "Raw Nickel Block",
+  "item.betterfactories.dirty_dissolved_nickel_bucket": "Bucket Of Dirty Dissolved Nickel",
+  "item.betterfactories.dissolved_nickel_bucket": "Bucked Of Dissolved Nickel",
+  "item.betterfactories.nickel_clump": "Nickel Clump",
+  "item.betterfactories.nickel_crystal": "Nickel Crystal",
+  "item.betterfactories.nickel_dust": "Nickel Dust",
+  "item.betterfactories.nickel_ingot": "Nickel Ingot",
+  "item.betterfactories.nickel_nugget": "Nickel Nugget",
+  "item.betterfactories.nickel_plate": "Nickel Plate",
+  "item.betterfactories.nickel_rod": "Nickel Rod",
+  "item.betterfactories.nickel_shard": "Nickel Shard",
+  "item.betterfactories.nickel_wire": "Nickel Wire",
+  "item.betterfactories.raw_nickel": "Raw Nickel"
+}
